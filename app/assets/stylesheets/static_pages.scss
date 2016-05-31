@@ -29,16 +29,30 @@ body.static_pages-poster {
     height: 100%;
     top: 0;
     left: 0;
-    animation:slideDownLogos 1.5s 3s forwards;
+    animation:slideDownLogos 1.5s 3s forwards,
+              slideUpLogos 1.5s 7s forwards;
     will-change:margin;
+  }
+  .headlines {
+    position:absolute;
+    width: 100%;
+    height: 410px;
+    top: 520px;
+    left: 0;
+    animation:fadeIn 2s 7.5s forwards,
+              slideUp-headlines 1s 7.5s forwards;
+    opacity:0;
+    background:asset-url('headlines-1.png') no-repeat 50% 50%;
+    background-size: contain;
   }
   .headline {
     position:absolute;
     width: 100%;
-    height: 153px;
-    top: 210px;
+    height: 193px;
+    top: 190px;
     left: 0;
-    animation:fadeIn 2s 3s forwards;
+    animation:fadeIn 2s 3s forwards,
+              fadeOut .5s 6.95s forwards;
     opacity:0;
     background:asset-url('headline-1.png') no-repeat 50% 50%;
     background-size: contain;
@@ -50,21 +64,21 @@ body.static_pages-poster {
     opacity:0;
     animation:fadeIn 1.5s 2.13s forwards;
     .logo {
-      width: 50%;
-      margin-left: 25%;
-      margin-right: 25%;
+      width: 35%;
+      margin-left: 32.5%;
+      margin-right: 32.5%;
       &.voxmedia-logo {
         background:asset-url('voxmedia-logo.png') no-repeat 50% 50%;
         background-size: contain;
 
         height: 36px;
-        margin-top:110px;
+        margin-top:60px;
         position: absolute;
         top: 0%;
       //    animation: slideUp-negSixty 1s 3s forwards;
       }
       &.recode-logo {
-        height:110px;
+        height:60px;
         background:asset-url('recode-logo.png') no-repeat 50% 50%;
         background-size: contain;
         position: absolute;
@@ -79,23 +93,24 @@ body.static_pages-poster {
     height:133px;
     text-align:center;
     top: 50%;
-    margin-top: -65px;
+    margin-top: -88px;
     opacity:0;
-    animation:fadeIn 2s 1.5s forwards;
+    animation:fadeIn 2s 1.5s forwards,
+              fadeOut 1s 4s forwards;
     > div {
       display:inline-block;
     }
     .left-curly {
-      height:133px;
-      width: 35px;
-      background:asset-url('left-curly.png') no-repeat 50% 50%;
-      background-size: cover;
+      height:113px;
+      width: 45px;
+      background:asset-url('caret-left.png') no-repeat 50% 50%;
+      background-size: contain;
     }
     .right-curly {
-      height:133px;
-      width: 35px;
-      background:asset-url('right-curly.png') no-repeat 50% 50%;
-      background-size: cover;
+      height:113px;
+      width: 45px;
+      background:asset-url('caret-right.png') no-repeat 50% 50%;
+      background-size: contain;
       animation:leftMargin 1.5s 1.75s forwards;
     }
   }
@@ -176,7 +191,15 @@ body.static_pages-index {
   }
   @keyframes slideDownLogos {
     0%   { margin-top:0; }
-    100% { margin-top:200px; }
+    100% { margin-top:220px; }
+  }
+  @keyframes slideUpLogos {
+    0%   { margin-top:220px; }
+    100% { margin-top:-175px; }
+  }
+  @keyframes slideUp-headlines {
+    0%   { top:520px; }
+    100% { top:310px; }
   }
   @keyframes slideUp-negSixty {
     0%   { top:0; }
@@ -188,6 +211,6 @@ body.static_pages-index {
   }
   @keyframes leftMargin {
     0%   { margin-left:0; }
-    100% { margin-left:250px; }
+    100% { margin-left:225px; }
   }
 }
