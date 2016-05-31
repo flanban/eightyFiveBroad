@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root 'static_pages#index'
-  get 'poster-style', to: 'static_pages#poster'
+  get 'recode', to: 'static_pages#poster'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

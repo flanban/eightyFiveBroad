@@ -75,7 +75,7 @@ body.static_pages-poster {
         margin-top:60px;
         position: absolute;
         top: 0%;
-      //    animation: slideUp-negSixty 1s 3s forwards;
+        animation: slideUp-negSixty .5s 7s forwards;
       }
       &.recode-logo {
         height:60px;
@@ -84,6 +84,7 @@ body.static_pages-poster {
         position: absolute;
         top: 0;
         opacity:1;
+        animation: slideDown-Sixty .5s 7s forwards;
       }
     }
   }
@@ -202,8 +203,12 @@ body.static_pages-index {
     100% { top:310px; }
   }
   @keyframes slideUp-negSixty {
-    0%   { top:0; }
-    100% { top:-60px; }
+    0%   { margin-top:60px; }
+    100% { margin-top:0; }
+  }
+  @keyframes slideDown-Sixty {
+    0%   { margin-top:0px; }
+    100% { margin-top:30px; }
   }
   @keyframes slideUp-negTwenty {
     0%   { top:0; }
