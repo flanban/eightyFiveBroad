@@ -70,6 +70,18 @@ body.static_pages-poster {
     background:asset-url('headline-1.png') no-repeat 50% 50%;
     background-size: contain;
   }
+  .replay {
+    background:asset-url('replay-white.png') no-repeat 8px 50%;
+    background-size: 33px;
+    position: absolute;
+    top: 100px;
+    left: 930px;
+    background-color: #000;
+    color: #fff;
+    padding: 20px 24px 20px 55px;
+    opacity:0;
+    animation:fadeIn 2s 10s forwards;
+  }
   #logos {
     width:100%;
     position:absolute;
